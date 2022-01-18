@@ -7,3 +7,4 @@ SpringBoot,Vueその他システムの勉強用
 ```
 mvn spring-boot:run
 ```
+これは`spring-boot-maven-plugin`がpom.xmlのpluginに入っているから叩ける。
