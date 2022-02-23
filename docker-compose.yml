@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  mysqldb:
+    image: mysql:8.0
+    container_name: mysql_demo_spring_boot_app
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: my_test_db
+      TZ: 'Asia/Tokyo'
+    volumes:
+      - ./docker/db/initdb.d:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
