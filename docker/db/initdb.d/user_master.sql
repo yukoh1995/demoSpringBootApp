@@ -6,9 +6,11 @@ DROP TABLE IF EXISTS `user_master`;
 
 CREATE TABLE `user_master`
 (
-  id           INT(10),
-  name     VARCHAR(40)
+  `user_id` INT(10) UNSIGNED NOT NULL,
+  `user_name` VARCHAR(40) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  PRIMARY KEY(`user_id`)
 );
 
-INSERT INTO `user_master` (id, name) VALUES (1, "kida");
-INSERT INTO `user_master` (id, name) VALUES (2, "shimamura");
+INSERT INTO `user_master` (`user_id`, `user_name`) VALUES (1, "kida");
+INSERT INTO `user_master` (`user_id`, `user_name`) VALUES (2, "shimamura");
